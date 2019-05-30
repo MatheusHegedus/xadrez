@@ -1,10 +1,10 @@
 package chess;
 
 import boardgame.Board;
+import boardgame.Piece;
 import boardgame.Position;
-import boardgame.piece;
 
-public abstract class ChessPiece extends piece {
+public abstract class ChessPiece extends Piece {
 
 	private Color color;
 	private int moveCount;
@@ -17,6 +17,7 @@ public abstract class ChessPiece extends piece {
 	public Color getColor() {
 		return color;
 	}
+	
 	public int getMoveCount() {
 		return moveCount;
 	}
@@ -24,10 +25,11 @@ public abstract class ChessPiece extends piece {
 	public void increaseMoveCount() {
 		moveCount++;
 	}
+
 	public void decreaseMoveCount() {
 		moveCount--;
 	}
-	
+
 	public ChessPosition getChessPosition() {
 		return ChessPosition.fromPosition(position);
 	}
